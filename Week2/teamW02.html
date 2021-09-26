@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Week 02 Team Activity</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+        <h1>Week 02 Team Activity</h1>
+        <body>
+            <div>
+                <input id="input" placeholder="Enter a number">
+                <button onclick="myFunction()">submit</button>
+                <div id="result1"></div>
+                </div>
+                <br>
+                <br>
+            <div>
+            <input id="input1" placeholder="Enter a number">
+            <button onclick="sum()">Sum</button>
+            <div id="result"></div>
+            </div>
+            <br>
+            <br>
+            <div>
+            <input id="input3" placeholder="Enter the 1º number"> 
+            <input id="input2" placeholder="Enter the 2º number">
+            <button onclick="add()">+</button> 
+            <button onclick="substract()">-</button> 
+            <button onclick="multiply()">x</button> 
+            <button onclick="divide()">/</button> 
+            <div id="result2"></div>
+            </div>
+
+            <script>
+            function myFunction() {
+              var input1 = document.getElementById("input").value;
+              document.getElementById("result1").innerHTML ="Your number is: " + input1;
+            }
+            function sum(){
+                const number = document.getElementById("input1").value;
+                if(!isNaN(number)){
+                let sum = 0;
+                for(i=0; i<=number; i++){
+                    sum += i;
+                }
+                document.getElementById("result").innerHTML ="The sum of the numbers is: " + sum;
+                }
+                else{
+                    document.getElementById("result").innerHTML = "Error, please enter a number";
+                }
+                }
+            function add(){
+                const input1 = document.getElementById("input3").value;
+                const input2 = document.getElementById("input2").value;
+                let sum = 0;
+                if(!isNaN(input1) && !isNaN(input2)){
+                    sum = parseInt(input1) + parseInt(input2);
+                }
+                document.getElementById("result2").innerHTML = "the result is: " + sum;
+                }
+            function substract(){
+                const input1 = document.getElementById("input3").value;
+                const input2 = document.getElementById("input2").value;
+                let sum = 0;
+                if(!isNaN(input1) && !isNaN(input2)){
+                    sum = parseInt(input1) - parseInt(input2);
+                }
+                document.getElementById("result2").innerHTML =  "the result is: " + sum;
+                }
+            function multiply(){
+                const input1 = document.getElementById("input3").value;
+                const input2 = document.getElementById("input2").value;
+                let sum = 0;
+                if(!isNaN(input1) && !isNaN(input2)){
+                    sum = parseInt(input1) * parseInt(input2);
+                }
+                document.getElementById("result2").innerHTML = "the result is: " + sum;
+                }
+            function divide(){
+                const input1 = document.getElementById("input3").value;
+                const input2 = document.getElementById("input2").value;
+                let sum = 0;
+                if(!isNaN(input1) && !isNaN(input2)){
+                    sum = parseInt(input1) / parseInt(input2);
+                }
+                document.getElementById("result2").innerHTML = "the result is: " + sum;
+                }
+            </script>
+            
+            </body>
+</html>

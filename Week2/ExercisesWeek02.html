@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The area of a triangle</title>
+    <style>
+        body{
+            background-color: rgb(182, 245, 224);
+        }
+        #area{
+            background-color: rgb(249, 249, 235);
+        }
+        #celsius{
+            background-color: rgb(255, 255, 255);
+        }
+        #fahrenheit{
+            background-color: rgb(249, 249, 235);
+        }
+        #square{
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Week 02 Exercise</h1>
+    <div id="area">
+    <p>Calculate the Area of a triangle:</p>
+    Side #1<input id="input"> 
+    Side #2<input id="input1"> 
+    Side #3<input id="input2"> 
+    <p id="result"></p>
+    <button onclick="myFunction()">Calculate</button>
+    </div>
+    <div id="celsius">
+    <p>Convert temperatures celsius - fahrenheit:</p>
+    Celcius: <input id="cel"> 
+    <p id="result1"></p>
+    <button onclick="cToF()">Convert to Fahrenheit</button>
+    <br><br>
+    </div>
+    <br>
+    <div id="fahrenheit">
+    Fahrenheit: <input id="fah"> 
+    <p id="result2"></p>
+    <button onclick="fToC()">Convert to Celsius</button>
+    </div>
+    <div id="square">
+        <p>Obtain the square of a number </p>
+        Number <input id="num"> 
+        <p id="result3"></p>
+        <button onclick="square()">Obtain square</button>
+        </div>
+    <div id="age">
+        <p>Can I have a credit card? </p>
+        Age <input id="age1" min="18"> 
+        <p id="result4"></p>
+        <button onclick="credit()">Can I?</button>
+        </div>
+    <script>
+        function myFunction() {
+              var side1 = document.getElementById("input").value;
+              var side2 = document.getElementById("input1").value;
+              var side3 = document.getElementById("input2").value;
+              var s = (parseInt(side1) + parseInt(side2) + parseInt(side3))/2;
+              var area =  Math.sqrt(s*((s-side1)*(s-side2)*(s-side3)));
+            document.getElementById("result").innerHTML = "The area of the triangle is: " + area;
+            }
+            function cToF(){
+            const cTemp = document.getElementById("cel").value;
+            const cToFahr = cTemp * 9 / 5 + 32;
+            const message = `${cTemp}\xB0C is ${cToFahr} \xB0F.`;
+            document.getElementById("result1").innerHTML = message;
+            }
+            function fToC(){
+            const fTemp = document.getElementById("fah").value;
+            const fToCel = (fTemp - 32) * 5 / 9;
+            const message = `${fTemp}\xB0F is ${fToCel}\xB0C.`;
+            document.getElementById("result2").innerHTML = message;
+            } 
+            function square(){
+                const x = document.getElementById("num").value; 
+                const square = x * x;
+                const message = `the square of ${x} is ${square}.`;
+                document.getElementById("result3").innerHTML = message;
+            }
+            function credit(){
+                const age = document.getElementById("age1").value;
+                const age2 = parseInt(age);
+                switch(age2){
+                    case 18:
+                    case 19:
+                    case 20:
+                    document.getElementById("result4").innerHTML = "You need to prove independent income";  
+                    break;
+                    case 21:
+                    case 22:
+                    case 23:
+                    case 24:
+                    case 25:   
+                    document.getElementById("result4").innerHTML = "Yes, you can have a credit card";  
+                    break;
+                    default:
+                    document.getElementById("result4").innerHTML = "You can't have a credit card";  
+                    break;
+                }
+            }
+        </script>
+</body>
+</html>
