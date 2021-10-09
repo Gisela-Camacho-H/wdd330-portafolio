@@ -23,6 +23,19 @@
         #age{
             background-color: rgb(249, 249, 235);
         }
+        .time{
+            background-color: white;
+            border: 2px solid #077966;
+            border-radius: 5px;
+            height: 100px;
+            width: 180px;
+            display: inline-block;
+            padding: 5px;
+        }
+        .time h2, .time p{text-align:center;}
+        h2{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -60,6 +73,37 @@
         <p id="result4"></p>
         <button onclick="credit()">Can I?</button>
         </div>
+
+        <h2>Different timezones</h2>
+        <div class="time">
+            <h2>Mexico City</h2>
+            <p id="mexicoCityTime"></p>
+        </div>
+        <div class="time">
+            <h2>Spain</h2>
+            <p id="spainTime"></p>
+        </div>
+        <div class="time">
+            <h2>Argentina</h2>
+            <p id="argentinaTime"></p>
+        </div>
+        <div class="time">
+            <h2>Germany</h2>
+            <p id="germanyTime"></p>
+        </div>
+        <div class="time">
+            <h2>London</h2>
+            <p id="londonTime"></p>
+        </div>
+        <div class="time">
+            <h2>New York</h2>
+            <p id="newYorkTime"></p>
+        </div>
+        <div class="time">
+            <h2>Sydney</h2>
+            <p id="sydneyTime"></p>
+        </div>
+    
     <script>
         function myFunction() {
               var side1 = document.getElementById("input").value;
@@ -90,24 +134,55 @@
             function credit(){
                 const age = document.getElementById("age1").value;
                 const age2 = parseInt(age);
-                switch(age2){
-                    case 18:
-                    case 19:
-                    case 20:
-                    document.getElementById("result4").innerHTML = "You need to prove independent income";  
-                    break;
-                    case 21:
-                    case 22:
-                    case 23:
-                    case 24:
-                    case 25:   
-                    document.getElementById("result4").innerHTML = "Yes, you can have a credit card";  
-                    break;
-                    default:
-                    document.getElementById("result4").innerHTML = "You can't have a credit card";  
-                    break;
+                    if (age2 > 21){
+                        document.getElementById("result4").innerHTML = "Yes, you can have a credit card";
+                    }else if (age2 < 18){
+                        document.getElementById("result4").innerHTML = "You can't have a credit card"; 
+                    }else{
+                        document.getElementById("result4").innerHTML = "You need to prove independent income";  
+                    }
                 }
-            }
+                var getArgentinaTime = function(){
+                document.getElementById("argentinaTime").innerHTML= new Date().toLocaleString("en-US",{timeZone:'America/Argentina/Buenos_Aires',timeStyle:'medium', hourCycle: 'h24'});
+                }
+                getArgentinaTime();
+                setInterval(getArgentinaTime,1000);
+
+                var getSpainTime = function(){
+                document.getElementById("spainTime").innerHTML= new Date().toLocaleString("en-US",{timeZone:'Europe/Madrid',timeStyle:'medium', hourCycle: 'h24'});
+                }
+                getSpainTime();
+                setInterval(getSpainTime,1000);
+
+                var getMexicoCityTime = function(){
+                document.getElementById("mexicoCityTime").innerHTML= new Date().toLocaleString("en-US",{timeZone:'America/Mexico_City',timeStyle:'medium', hourCycle: 'h24'});
+                }
+                getMexicoCityTime();
+                setInterval(getMexicoCityTime,1000);
+
+                var getGermanyTime = function(){
+                document.getElementById("germanyTime").innerHTML= new Date().toLocaleString("en-US",{timeZone:'Europe/Berlin',timeStyle:'medium', hourCycle: 'h24'});
+                }
+                getGermanyTime();
+                setInterval(getGermanyTime,1000);
+
+                var getLondonTime = function(){
+                document.getElementById("londonTime").innerHTML= new Date().toLocaleString("en-US",{timeZone:'Europe/London',timeStyle:'medium', hourCycle: 'h24'});
+                }
+                getLondonTime();
+                setInterval(getLondonTime,1000);
+
+                var getNewYorkTime = function(){
+                document.getElementById("newYorkTime").innerHTML= new Date().toLocaleString("en-US",{timeZone:'America/New_york',timeStyle:'medium', hourCycle: 'h24'});
+                }
+                getNewYorkTime();
+                setInterval(getNewYorkTime,1000);
+
+                var getSydneyTime = function(){
+                document.getElementById("sydneyTime").innerHTML= new Date().toLocaleString("en-US",{timeZone:'Australia/Sydney',timeStyle:'medium', hourCycle: 'h24'});
+                }
+                getSydneyTime();
+                setInterval(getSydneyTime,1000);
         </script>
 </body>
 </html>
