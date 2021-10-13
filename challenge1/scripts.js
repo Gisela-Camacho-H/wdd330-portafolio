@@ -21,8 +21,22 @@ var addTask = function(){
     listItem.appendChild(deleteButton);
     incompleteTaskHolder.appendChild(listItem)
 }
-var deleteTask = function() {
-    
+// Delete tast
+var deleteTask = function(){
+    console.log("task deleted");
+    var currentButton = this
+    var listItem = currentButton.parentNode
+    var unorderedList = listItem.parentNode
+    unorderedList.removeChild(listItem)
 
 }
 addButton.addEventListener('click', addTask)
+
+for (let i = 0; i < completedTaskHolder.children.length; i++) {
+    const task = completedTaskHolder.children[i];
+    task.lastElementChild.onclick = deleteTask
+}
+for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
+    const task = incompleteTaskHolder.children[i];
+    task.lastElementChild.onclick = deleteTask
+}
