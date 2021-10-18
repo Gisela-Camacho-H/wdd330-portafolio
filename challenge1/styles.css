@@ -8,7 +8,7 @@ li{
     margin-left: 110px;
     margin-top: 3px;
     margin-bottom: 3px;
-    font-size: 25px;
+    font-size: 15px;
     background-color: cornsilk;
     border: white ;
 }
@@ -21,3 +21,7 @@ ul{
 .container{
     width: 250px;
 }
+input[type=checkbox]:checked + label {
+    color:rgb(20, 19, 19);
+    text-decoration: line-through;
+  }
