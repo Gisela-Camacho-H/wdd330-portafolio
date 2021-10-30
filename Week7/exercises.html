@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Function properties and methods</h2>
+<img src="./img/2.png">
+<p id="demo"></p>
+<hr>
+<h2>Memorization </h2>
+<img src="./img/5.png">
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+function sayHello(){
+	return `Hello, my name is ${ this.name}`;
+}
+const gisela = { name: "Gisela"};
+document.getElementById("demo").innerHTML = sayHello.call(gisela);
+
+function square(x) {
+	square.cache = square.cache || {};
+	if (!square.cache[x]){
+		square.cache[x] = x * x;
+	}
+	return square.cache[x]
+}
+document.getElementById("demo1").innerHTML = "The squere of 3 is " + square(3);
+document.getElementById("demo2").innerHTML = "The squere of -11 is " + square(-11);
+</script>
+
+</body>
+</html>
