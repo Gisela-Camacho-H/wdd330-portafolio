@@ -44,10 +44,60 @@ function party(){
 	};
 };
 
-console.log(party());
-console.log(party());
-console.log(party());
+//console.log(party());
+//console.log(party());
+//console.log(party());
+const dice = {
+	sides: 6,
+		roll() {
+			return Math.floor(this.sides * Math.random()) + 1;
+		}
+	}
+	
+	//console.log('Before the roll');
+	
+	const roll = new Promise( (resolve,reject) => {
+		const n = dice.roll();
+		if(n > 1){
+			setTimeout(()=>{resolve(n)},n*200);
+		} else {
+			setTimeout(()=>reject(n),n*200);
+		}
+	});
+	
+	//roll.then(result => console.log(`I rolled a ${result}`) )
+	//.catch(result => console.log(`Drat! ... I rolled a ${result}`) );
+	
+	//console.log('After the roll');
 
+	function random(a,b=1) {
+		// if only 1 argument is provided, we need to swap the values of a and b
+		if (b === 1) {
+			[a,b] = [b,a];
+		} 
+		return Math.floor((b-a+1) * Math.random()) + a;
+	}
+	
+	//console.log(random(6));
+	//console.log(random(10,20));
 
+	function returnHello() {
+		console.log('returnHello() called');
+		return function() {
+			console.log('Hello World!');
+		}
+	}
+	//console.log(returnHello());
+	//const hello = returnHello();
+	//console.log(hello);
+	//console.log(hello());
 
-
+	function counter(start){
+		let i = start;
+		return function() {
+			return i++;
+		}
+	}
+	const count = counter(2);
+	//console.log(count());
+	//console.log(count());
