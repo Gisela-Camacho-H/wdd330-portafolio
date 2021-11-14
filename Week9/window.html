@@ -10,10 +10,21 @@
     <h2>
         <script>document.write("Welcome!")</script>
     </h2>
+    <div id='square'></div>
     <script>
         window.alert('Hello this is my website - Gisela');
         window.confirm('Do you wish to continue?');
         window.prompt('Please enter your name:');
+
+        window.setTimeout( () => alert("Time's Up!"), 3000);
+
+        const squareElement = document.getElementById('square');
+        let angle = 0;
+
+        setInterval( () => {
+            angle = (angle + 2) % 360;
+            squareElement.style.transform = `rotate(${angle}deg)`
+            }, 1000/60);
     </script>
 
 </body>

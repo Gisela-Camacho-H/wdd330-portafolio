@@ -4,3 +4,9 @@ body{
 .notes{
     background-color: white;
 }
+#square {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: rgb(25, 101, 104);
+}
