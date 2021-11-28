@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+body{
+    background-color:  #a3d9f0;
+}
+header{
+    background-image: url('https://media.istockphoto.com/vectors/space-background-wide-realistic-cosmos-with-shining-stars-long-banner-vector-id1283095709?k=20&m=1283095709&s=170667a&w=0&h=FBCrFEbfgaK-G44Sxpr6NiOu3kJHhrt2F6TmKrc4keM=');
+    background-size: 100%;
+}
+footer{
+    background-color:#a255da;
+}
+li a{
+    text-decoration: none;
+    color: rgb(243, 239, 245);
+    font-size: 3.5vh;
+    margin-left: 3.5vh;
+}
+.header{
+    display:flex;
+}
+.nav{
+    margin: 30px;
+}
+main{
+    margin: auto;
+    width: 90%;
+}
+p{
+    font-size: 12px;
+}
+h3{
+    font-size: 24px;
+}
+ul{
+    list-style: none;
+}
+footer p, header p, footer h3, footer{
+    text-align: center;
+}
+#navbar{
+    display:flex;
+    justify-content: space-between;
+    margin: auto;
+}
+#navbar ul{
+    display: flex;
+}
+li{
+    margin: 0 30px;
+}
+.logoimg{
+    border-radius: 20px;
+    margin: 20px;
+}
+.container{
+    display:flex;
+    justify-content: space-around;
+}
+#description{
+    text-align: justify;
+    margin: 10px;
+    padding: 40px;
+}
+#date{
+    text-align: right;
+    margin: 10px;
+}
+#title{
+    text-align: center;
+}
+#footer{
+    display:flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+main p{
+    font-size: 20px;
+}
+.fas{
+    color:rgb(243, 239, 245);
+    font-size: 30px;
+}
