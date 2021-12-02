@@ -89,3 +89,7 @@ main p{
     color:rgb(243, 239, 245);
     font-size: 30px;
 }
+.container1{
+    display:flex;
+    justify-content: space-around;
+}
