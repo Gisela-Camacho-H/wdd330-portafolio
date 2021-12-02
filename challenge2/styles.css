@@ -13,6 +13,11 @@ header{
 footer{
     background-color:#a255da;
 }
+.picOfDay, .mars{
+    text-align: center;
+    color:#532a70;
+    background-color: rgb(229, 200, 244);
+}
 li a{
     text-decoration: none;
     color: rgb(243, 239, 245);

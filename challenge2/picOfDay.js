@@ -13,3 +13,4 @@ function useApiData(data){
     document.querySelector("#photo").innerHTML = `<img width=400px src="${data.url}">`
 }
 sendApiRequest()
+
