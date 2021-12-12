@@ -3,10 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Picture of the day</title>
+        <title>Solar System</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <style>
+            h1{
+                text-align: center;
+            }
+            .search{
+                margin: auto;
+                text-align: center;
+            }
+        </style>
     </head>
 <body>
     <header>
@@ -31,21 +40,26 @@
     </header>
     <br>
     <main>
-        <div class="picOfDay">
-            <h1>Picture of the day</h1>
+        <div class="search">
+            <h1>Look for awesome pictures</h1>
+            <br>
+            <br>
+            <input type="date" id="dateDay" name="dateDay">
+            <input class="submit" type="submit">
+            <p id="description"></p>
+            <img id="spacePic" src="" alt="">
         </div>
-        <br>
         <div class="container">
             <div>
                 <br>
                 <h3 id="title"></h3>
-                <p id="description"></p>
+                <br>
+                <p id="description1"></p>
                 <p id="date"></p>
             </div>
             <div id="photo"></div>
         </div>
-    
-        <script src="picOfDay.js"></script>
+        <script src="solarsystem.js"></script>
     </main>
     <br>
     <br>

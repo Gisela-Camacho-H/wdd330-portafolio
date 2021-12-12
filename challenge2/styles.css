@@ -93,3 +93,52 @@ main p{
     display:flex;
     justify-content: space-around;
 }
+.index1{
+    margin: auto;
+}
+.input{
+    font-size: 30px;
+    margin: 20px 0px 20px 50px;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+}
+.login, .submit{
+    font-size: 25px;
+    padding: 10px;
+    background-color: rgb(233, 204, 248);
+    color: purple;
+    border-radius: 10px;
+    border: 3px purple solid;
+    margin-left: 50px;
+    margin-top: 15px;
+    width:90%;
+}
+input{
+    font-size: 20px;
+    margin: 5px 0px 5px 50px;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+}
+button{
+    font-size: 30px;
+    padding: 3px;
+    background-color: rgb(233, 204, 248);
+    color: purple;
+    border-radius: 10px;
+    border: 3px purple solid;
+    margin: 5px 0px 5px 70px;
+    width:40%;
+}
+.password{
+    width: 40%;
+    margin: 5px 0px 5px 70px;
+}
+label{
+    font-size: 30px;
+    margin-left: 50px;
+}
+.birthday{
+    width: 20%;
+}
