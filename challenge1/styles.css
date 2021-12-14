@@ -19,7 +19,7 @@ ul{
     list-style-type: none;
 }
 .container{
-    width: 250px;
+    width: 350px;
 }
 input[type=checkbox]:checked + label {
     color:rgb(20, 19, 19);
